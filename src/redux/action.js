@@ -1,11 +1,23 @@
-import { ADD_TO_CART } from "./constants";
+import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART } from "./constants";
 
-const addToCart = (data) => {
+export const addToCart = (data) => {
     console.log("addToCart action called", data);
     return {
         type: ADD_TO_CART,
         data
     }
 }
-
-export default addToCart;
+export const removeFromCart = (data) => {
+    console.log("removeFromCart called", data);
+    return {
+        type: REMOVE_FROM_CART,
+        data
+    }
+}
+export const emptyCart = () => {
+    console.log("emptyCart called");
+    return {
+        type: EMPTY_CART,
+        
+    }
+}
