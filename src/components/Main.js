@@ -2,7 +2,7 @@
 import { useDispatch } from "react-redux";
 import addToCart from "../redux/action";
 
-export const Main = () => {
+const Main = () => {
   const dispatch = useDispatch();
   const product = {
     name: "iPhone",
@@ -16,3 +16,5 @@ export const Main = () => {
     </div>
   );
 }
+
+export default Main;

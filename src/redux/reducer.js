@@ -4,10 +4,10 @@ export const cartData = (data = [], action) => {
   console.log("reducer called", action.type);
   switch (action.type) {
     case ADD_TO_CART:
-      return data;
+      return [action.data, ...data]
     case REMOVE_FROM_CART:
       return true;
     default:
-      return false;
+      return [];
   }
 };
