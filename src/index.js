@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./redux/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-console.warn(store);
+// console.warn(store);
 root.render(
   <Provider store={store}>
     <App />
