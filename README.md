@@ -1,4 +1,4 @@
-npx i react-redux redux-toolkit react-saga
+npx i react-redux redux react-saga
 
 # Getting Started with Create React App
 
