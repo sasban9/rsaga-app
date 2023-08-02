@@ -4,7 +4,8 @@ export const cartData = (data = [], action) => {
   console.log("reducer called", action.type);
   switch (action.type) {
     case ADD_TO_CART:
-      return [action.data, ...data]
+      // if(!data.includes(action.data))
+        return [action.data, ...data]
     case REMOVE_FROM_CART:
       data.length = data.length ? data.length - 1 : []
       return [...data];

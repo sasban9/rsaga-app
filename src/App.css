@@ -9,8 +9,10 @@
 
 /* header style */
 header{
-  background-color: aliceblue;
-  height: 10rem;
+  background-color: #e1e8ff;
+  height: 5rem;
+  display: flex; justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .cart-div{float:right;margin:2rem;position: relative;}
