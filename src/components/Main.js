@@ -2,7 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, emptyCart, removeFromCart } from "../redux/action";
 import { Button, ButtonGroup } from "@mui/material";
-import { Circle, CircleNotificationsSharp, ShoppingBagSharp, ShoppingBagTwoTone, Square } from "@mui/icons-material";
+import { Circle, ShoppingBagSharp, ShoppingBagTwoTone } from "@mui/icons-material";
 import { productList } from "../redux/product/action";
 
 const Main = () => {
@@ -55,7 +55,7 @@ const Main = () => {
           <div>Color: {product.color} <Circle sx={{ color: product.color }} /> </div>
           <ButtonGroup>
             <Button variant="outlined" onClick={() => dispatch(addToCart(product))}>Add <ShoppingBagTwoTone /></Button>
-            <Button variant="outlined" onClick={() => dispatch(removeFromCart(product.name))}>Remove <ShoppingBagSharp /></Button>
+            <Button variant="outlined" onClick={() => dispatch(removeFromCart(product.id))}>Remove <ShoppingBagSharp /></Button>
           </ButtonGroup>
           <br/><br/>
           <div style={{width:300,height:300,background:`url(${product.photo}) no-repeat 50% 50%`,backgroundSize:"contain",border:"solid 1px #eee"}}></div>
