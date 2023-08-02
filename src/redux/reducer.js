@@ -1,7 +1,7 @@
 import { ADD_TO_CART, EMPTY_CART, REMOVE_FROM_CART } from "./constants";
 
 export const cartData = (data = [], action) => {
-  console.log("reducer called", action.type);
+  console.log("reducer called 2", action.type);
   switch (action.type) {
     case ADD_TO_CART:
       // if(!data.includes(action.data))
@@ -10,8 +10,9 @@ export const cartData = (data = [], action) => {
       data.length = data.length ? data.length - 1 : []
       return [...data];
     case EMPTY_CART:
-      return []
+      data = []
+      return [...data]
     default:
-      return [];
+      return data;
   }
 };

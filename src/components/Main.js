@@ -1,11 +1,14 @@
 // import logo from './logo.svg';
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addToCart, emptyCart, removeFromCart } from "../redux/action";
 import { Button, ButtonGroup } from "@mui/material";
 import { Circle, CircleNotificationsSharp, ShoppingBagSharp, ShoppingBagTwoTone, Square } from "@mui/icons-material";
+import { productList } from "../redux/product/action";
 
 const Main = () => {
   const dispatch = useDispatch();
+  let data = useSelector(state => state.productData);
+  console.log("data in main ", data);
   const products = [
     {
       id: 1,
@@ -60,7 +63,9 @@ const Main = () => {
       })}
       <hr style={{width:'100%'}} />
       <div>
-        <Button variant="contained" onClick={() => dispatch(emptyCart())}>Empty <ShoppingBagTwoTone /></Button></div>
+        <Button variant="contained" onClick={() => dispatch(emptyCart())}>Empty <ShoppingBagTwoTone /></Button>
+        <Button variant="outlined" onClick={() => dispatch(productList())}>Product List <ShoppingBagTwoTone /></Button>
+        </div>
     </div>
   );
 }
